@@ -1,0 +1,29 @@
+
+
+local message = "your message here" -- message to spam
+
+local speed = 0.1 -- Delay
+
+getgenv().chatspammer = true -- Toggle true = spam false = no spam
+
+-- made by proohio
+-- very pro
+-- https://proohio.click/
+
+local rs = game:GetService("ReplicatedStorage")
+local tcs = game:GetService("TextChatService")
+ilc = tcs.ChatVersion == Enum.ChatVersion.LegacyChatService
+function chatMessage(str)
+	str = tostring(str)
+	if not ilc then
+		tcs.TextChannels.RBXGeneral:SendAsync(str)
+	else
+		rs.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(str, "All")
+	end
+end
+spawn(function()
+	while getgenv().chatspammer do
+		chatMessage(message)
+		task.wait(speed)
+	end
+end)
