@@ -1,11 +1,14 @@
+--[[
+	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
+]]
+local message = "a" -- message to spam
+
+local speed = 1 -- Delay
+
+getgenv().chatspammer = false -- Toggle true = spam false = no spam
 
 
-local message = "random" -- message to spam
 
-local speed = 0.1 -- Delay
-
-getgenv().chatspammer = true -- Toggle true = spam false = no spam
---made by thingchop
 
 local rs = game:GetService("ReplicatedStorage")
 local tcs = game:GetService("TextChatService")
