@@ -1,14 +1,11 @@
 
 
-local message = "your message here" -- message to spam
+local message = "random" -- message to spam
 
 local speed = 0.1 -- Delay
 
 getgenv().chatspammer = true -- Toggle true = spam false = no spam
-
--- made by proohio
--- very pro
--- https://proohio.click/
+--made by thingchop
 
 local rs = game:GetService("ReplicatedStorage")
 local tcs = game:GetService("TextChatService")
